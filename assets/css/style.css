@@ -41,12 +41,6 @@
 
 /* region Debug */
 
-#site_main .col_left {
-    height: calc(100vh - var(--horiz-bars-h));
-    background-color: var(--darkest);
-    width: var(--sidebar-w);
-}
-
 #site_main .col_right {
     height: calc(100vh - var(--horiz-bars-h));
     background-color: var(--darker);
@@ -73,6 +67,80 @@
 
 
 /* #region site_main */
+
+#site_main .col_left {
+    height: calc(100vh - var(--horiz-bars-h));
+    background-color: var(--darkest);
+    width: var(--sidebar-w);
+    color: var(--primary);
+    padding: 20px;
+}
+
+#site_main .col_left .col-container {
+    flex-direction: column;
+}
+
+#site_main .col_left .logo img {
+    height: 40px;
+}
+
+#site_main .col_left .options img {
+    height: 25px;
+}
+
+#site_main .col_left .options {
+    font-size: 14px;
+}
+
+#site_main .col_left .playlist h3 {
+    font-size: 15px;
+    color: var(--lighter);
+}
+
+#site_main .col_left .playlist span {
+    font-size: 16px;
+}
+
+#site_main .col_left .playlist li {
+    font-size: 15px;
+}
+
+.add-btn {
+    height: 37px;
+    width: 37px;
+    background-color: var(--light);
+    color: var(--darkest);
+    text-align: center;
+    line-height: 37px;
+    font-size: 20px;
+}
+
+#site_main .col_left .install {
+    border-bottom: 1px solid var(--primary);
+    font-size: 14px;
+}
+
+#site_main .col_left .install img {
+    height: 12px;
+}
+
+#site_main .col_left .user {
+    font-size: 16px;
+    color: var(--lighter);
+}
+
+#site_main .col_left .user .profile-circle {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: var(--primary-light);
+    padding: 0 7px 0 0px;
+}
+
+#site_main .col_left .user .profile-circle img {
+    transform: translate(3px, 0px);
+}
 
 
 /* #endregion site_main */
