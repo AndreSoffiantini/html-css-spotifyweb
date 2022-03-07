@@ -1,0 +1,68 @@
+/* #region Common */
+
+:root {
+    --darkest: #000000;
+    --darkest-trsp: #00000056;
+    --darker: #141922;
+    --dark: #282828;
+    --primary: #7B7D82;
+    --primary-light: #A3A3A3;
+    --light: #D2D2D2;
+    --lighter: #FFFFFF;
+    --selected: #ADFF2F;
+    --horiz-bars-h: 91px;
+    --sidebar-w: 230px;
+}
+
+
+/* #endregion Common */
+
+
+/* region Debug */
+
+#site_main .col_left {
+    height: calc(100vh - var(--horiz-bars-h));
+    background-color: var(--darkest);
+    width: var(--sidebar-w);
+}
+
+#site_main .col_right {
+    height: calc(100vh - var(--horiz-bars-h));
+    background-color: var(--darker);
+    width: calc(100% - var(--sidebar-w));
+}
+
+#site_main .upgrade {
+    height: var(--horiz-bars-h);
+    background-color: var(--darkest-trsp);
+}
+
+#site_main .navbar {
+    height: 58px;
+    background-color: #67E2828F;
+}
+
+#site_main .main-section {
+    height: 333px;
+    background-color: #A2D39BA8;
+}
+
+#site_footer {
+    height: var(--horiz-bars-h);
+    background-color: var(--dark);
+}
+
+
+/* endregion Debug */
+
+
+/* #region site_main */
+
+
+/* #endregion site_main */
+
+
+/* #region site_footer */
+
+
+/* #endregion site_footer */
