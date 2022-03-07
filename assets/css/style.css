@@ -14,6 +14,10 @@
     --sidebar-w: 230px;
 }
 
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
 
 /* #endregion Common */
 
@@ -37,19 +41,14 @@
     background-color: var(--darkest-trsp);
 }
 
-#site_main .navbar {
+.debug #site_main .navbar {
     height: 58px;
     background-color: #67E2828F;
 }
 
-#site_main .main-section {
+.debug #site_main .main-section {
     height: 333px;
     background-color: #A2D39BA8;
-}
-
-#site_footer {
-    height: var(--horiz-bars-h);
-    background-color: var(--dark);
 }
 
 
@@ -63,6 +62,70 @@
 
 
 /* #region site_footer */
+
+#site_footer {
+    height: var(--horiz-bars-h);
+    background-color: var(--dark);
+}
+
+#site_footer .col_side {
+    width: var(--sidebar-w);
+    justify-content: space-around;
+}
+
+#site_footer .col_side>* {
+    align-self: center;
+}
+
+#site_footer .album-cover {
+    width: 42px;
+    height: 42px;
+}
+
+#site_footer .song-details {
+    flex-direction: column;
+    padding-right: 5%;
+    margin-left: -5%;
+}
+
+#site_footer .song-details span:first-child {
+    font-size: 13px;
+    color: var(--lighter);
+}
+
+#site_footer .song-details span:last-child {
+    font-size: 11px;
+    color: var(--primary);
+}
+
+#site_footer .icons-left {
+    color: var(--primary);
+}
+
+#site_footer .icons-right {
+    color: var(--lighter);
+}
+
+#site_footer [class^="icons-"]>i {
+    margin: 5px;
+}
+
+.volume-bar {
+    width: 120px;
+    height: 5px;
+    background-color: var(--primary);
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+.volume-bar>.col_20 {
+    background-color: var(--primary-light);
+    border-radius: 10px;
+}
+
+#site_footer .col_middle {
+    width: calc(100% - 2*var(--sidebar-w));
+}
 
 
 /* #endregion site_footer */

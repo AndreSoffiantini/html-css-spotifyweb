@@ -98,6 +98,14 @@
     .col_50 {
         width: 50%;
     }
+    
+    .col_16 {
+        width: 16%;
+    }
+    
+    .col_68 {
+        width: 68%;
+    }
     /* #endregion Col */
     /* #endregion Grid */
     /* #region List */
