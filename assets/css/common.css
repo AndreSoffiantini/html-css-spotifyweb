@@ -39,6 +39,11 @@
     .flex-row-wrap {
         flex-flow: row wrap;
     }
+    
+    .flex-col {
+        display: flex;
+        flex-direction: column;
+    }
     /* #region Grid */
     /* #region Row */
     

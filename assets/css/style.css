@@ -35,6 +35,13 @@
     border-radius: 10px;
 }
 
+.selected-h {
+    background-color: var(--selected);
+    height: 2px;
+    width: 30px;
+    align-self: center;
+}
+
 
 /* endregion Utility */
 
@@ -191,11 +198,8 @@
 #site_main .col_right .upgrade {
     height: var(--horiz-bars-h);
     background-color: var(--darkest-trsp);
-    width: calc(100% - var(--sidebar-w));
-    position: fixed;
+    position: sticky;
     top: 0;
-    right: 0;
-    margin-left: var(--sidebar-w);
     justify-content: flex-end;
     align-items: center;
 }
@@ -209,6 +213,18 @@
     padding: 0 40px;
     font-size: 13px;
     align-items: center;
+}
+
+.navbar {
+    padding-top: 20px;
+    justify-content: center;
+}
+
+.navbar li>a {
+    margin: 0px 12px 5px 12px;
+    font-size: 15px;
+    color: var(--primary);
+    text-align: center;
 }
 
 
