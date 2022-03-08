@@ -47,14 +47,10 @@
     width: calc(100% - var(--sidebar-w));
 }
 
-#site_main .upgrade {
-    height: var(--horiz-bars-h);
-    background-color: var(--darkest-trsp);
-}
-
 .debug #site_main .navbar {
     height: 58px;
     background-color: #67E2828F;
+    margin-top: var(--horiz-bars-h);
 }
 
 .debug #site_main .main-section {
@@ -190,6 +186,29 @@
 
 #site_main .col_right {
     margin-left: var(--sidebar-w);
+}
+
+#site_main .col_right .upgrade {
+    height: var(--horiz-bars-h);
+    background-color: var(--darkest-trsp);
+    width: calc(100% - var(--sidebar-w));
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-left: var(--sidebar-w);
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.upgrade-btn {
+    height: 40px;
+    border-radius: 25px;
+    border: 1px solid var(--lighter);
+    color: var(--lighter);
+    margin-right: 20px;
+    padding: 0 40px;
+    font-size: 13px;
+    align-items: center;
 }
 
 
