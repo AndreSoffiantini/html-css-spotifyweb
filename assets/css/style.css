@@ -259,7 +259,7 @@
     }
     
     #site_main .col_left .playlist ul {
-        overflow-y: visible;
+        overflow-y: auto;
     }
     
     #site_main .col_left .playlist li {
