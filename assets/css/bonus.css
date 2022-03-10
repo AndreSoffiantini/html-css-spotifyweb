@@ -1,0 +1,49 @@
+/* w-l */
+
+@media screen and (max-width: 1200px) {
+    #site_main .playlist-card {
+        display: none;
+    }
+    #site_main .playlist-card:first-child,
+    #site_main .playlist-card:nth-child(2),
+    #site_main .playlist-card:nth-child(3),
+    #site_main .playlist-card:nth-child(4) {
+        display: block;
+    }
+}
+
+
+/*w-m*/
+
+@media screen and (max-width: 768px) {
+    #site_main .playlist-card {
+        display: none;
+    }
+    #site_main .playlist-card:first-child,
+    #site_main .playlist-card:nth-child(2) {
+        display: block;
+    }
+}
+
+
+/* w-s */
+
+
+/* @media screen and (min-width: 552px) {
+    #site_main .playlist-card {
+        display: none;
+    }
+    #site_main .playlist-card:first-child,
+    #site_main .playlist-card:nth-child(2) {
+        display: block;
+    }
+} */
+
+
+/* h-xs */
+
+@media screen and (max-height: 260px) {
+    #site_main .col_right>.upgrade {
+        display: none;
+    }
+}

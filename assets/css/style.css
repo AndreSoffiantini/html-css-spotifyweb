@@ -246,6 +246,7 @@
     
     #site_main .col_left .playlist .create-playlist {
         align-items: center;
+        margin-bottom: 22px;
     }
     
     #site_main .col_left .playlist .create-playlist a {
@@ -260,11 +261,17 @@
     
     #site_main .col_left .playlist ul {
         overflow-y: auto;
+        height: calc(100vh - 500px);
+        min-height: 100px;
     }
     
     #site_main .col_left .playlist li {
-        margin-top: 22px;
+        margin-bottom: 25px;
         font-size: 15px;
+    }
+    
+    #site_main .col_left .playlist li:last-child {
+        margin-bottom: 10px;
     }
     
     .add-btn {
@@ -582,10 +589,9 @@
         }
     }
     /* h-xs */
-    
-    @media screen and (max-height: 260px) {
+    /* @media screen and (max-height: 260px) {
         #site_main .col_right>.upgrade {
             display: none;
         }
-    }
+    } */
     /* #endregion media-query */
