@@ -16,6 +16,7 @@
 
 * {
     font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -44,6 +45,9 @@ li>a:hover {
 
 /* #region Utility */
 
+
+/* #region rounded-bar */
+
 .rounded-bar {
     height: 5px;
     background-color: var(--primary);
@@ -60,7 +64,7 @@ li>a:hover {
     border-radius: 100%;
     width: 10px;
     height: 10px;
-    transform: translate(0, -20%);
+    transform: translate(-50%, -20%);
     display: none;
 }
 
@@ -76,6 +80,12 @@ li>a:hover {
     display: block;
 }
 
+
+/* #endregion rounded-bar */
+
+
+/* #region selected */
+
 .selected-h {
     background-color: var(--selected);
     height: 2px;
@@ -90,13 +100,21 @@ li>a:hover {
     align-self: center;
 }
 
+
+/* #endregion selected */
+
+
+/* #region playlist */
+
 .playlist-cont {
     width: calc(100% - 40px);
     margin: auto;
+    flex-wrap: wrap;
 }
 
 .playlist-card {
     width: calc(100%/6);
+    height: auto;
     margin-right: 1.5%;
     display: flex;
     flex-direction: column;
@@ -147,6 +165,9 @@ li>a:hover {
 .round-pic {
     border-radius: 50%;
 }
+
+
+/* #endregion playlist */
 
 
 /* #endregion Utility */
@@ -208,6 +229,13 @@ li>a:hover {
     margin-bottom: 29px;
 }
 
+#site_main .col_left .logo img:last-child {
+    display: none;
+}
+
+
+/* #region options */
+
 #site_main .col_left .options img {
     height: 25px;
     margin-right: 10px;
@@ -227,6 +255,12 @@ li>a:hover {
     align-self: baseline;
     transform: translate(-20px, 0px);
 }
+
+
+/* #endregion options */
+
+
+/* #region playlist */
 
 #site_main .col_left .playlist {
     margin-top: 30px;
@@ -272,6 +306,12 @@ li>a:hover {
     color: var(--lighter);
 }
 
+
+/* #endregion playlist */
+
+
+/* #region install */
+
 #site_main .col_left .install {
     border-bottom: 1px solid var(--primary);
     padding-bottom: 13px;
@@ -285,6 +325,12 @@ li>a:hover {
 #site_main .col_left .install img {
     height: 12px;
 }
+
+
+/* #endregion install */
+
+
+/* #region user */
 
 #site_main .col_left .user {
     font-size: 16px;
@@ -306,6 +352,9 @@ li>a:hover {
 }
 
 
+/* #endregion user */
+
+
 /* #endregion col_left */
 
 
@@ -318,6 +367,9 @@ li>a:hover {
     margin-bottom: var(--horiz-bars-h);
 }
 
+
+/* #region upgrade */
+
 #site_main .col_right .upgrade {
     height: var(--horiz-bars-h);
     background-color: var(--darkest-trsp);
@@ -325,6 +377,8 @@ li>a:hover {
     top: 0;
     justify-content: flex-end;
     align-items: center;
+    z-index: 10;
+    overflow-x: hidden;
 }
 
 .upgrade-btn {
@@ -342,13 +396,20 @@ li>a:hover {
     transform: scale(1.2);
 }
 
+
+/* #endregion upgrade */
+
+
+/* #region navbar */
+
 .navbar {
     padding-top: 20px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .navbar li>a {
-    margin: 0px 12px 5px 12px;
+    margin: 0px 12px 0px 12px;
     font-size: 15px;
     color: var(--primary);
     text-align: center;
@@ -359,10 +420,13 @@ li>a:hover {
 }
 
 
+/* #endregion navbar */
+
+
 /* #region main-section */
 
 .main-section {
-    padding: 20px 20px 10px 20px;
+    padding: 35px 20px 10px 20px;
     background-color: var(--darker);
 }
 
@@ -401,6 +465,9 @@ li>a:hover {
     left: 0;
 }
 
+
+/* #region col_side */
+
 #site_footer .col_side {
     width: var(--sidebar-w);
     justify-content: space-around;
@@ -409,6 +476,9 @@ li>a:hover {
 #site_footer .col_side>* {
     align-self: center;
 }
+
+
+/* #region left-col_side */
 
 #site_footer .album-cover {
     width: 42px;
@@ -448,6 +518,12 @@ li>a:hover {
     color: var(--lighter);
 }
 
+
+/* #endregion left-col_side */
+
+
+/* #region right-col_side */
+
 #site_footer .icons-right {
     color: var(--lighter);
 }
@@ -460,6 +536,15 @@ li>a:hover {
     width: 120px;
     margin-right: 15px;
 }
+
+
+/* #endregion right-col_side */
+
+
+/* #endregion col_side */
+
+
+/* #region col_middle */
 
 #site_footer .col_middle {
     width: calc(100% - 2*var(--sidebar-w));
@@ -503,4 +588,56 @@ li>a:hover {
 }
 
 
+/* #endregion col_middle */
+
+
 /* #endregion site_footer */
+
+
+/* #region media-query */
+
+@media screen and (max-width: 1200px) {
+    #site_main .playlist-card {
+        width: calc(100%/4);
+    }
+    #site_footer .play-time {
+        width: 80%;
+    }
+}
+
+
+/* w-s */
+
+@media screen and (max-width: 552px) {
+    #site_main .col_left {
+        width: 50px;
+        padding: 5px 10px;
+    }
+    #site_main .col_left .playlist,
+    #site_main .col_left .install,
+    #site_main .col_left .logo>img:first-child,
+    #site_main .col_left .options a,
+    #site_main .col_left .user span {
+        display: none;
+    }
+    #site_main .col_left .logo>img:last-child {
+        display: block;
+        margin-bottom: 15px;
+    }
+    #site_main .col_right {
+        margin-left: 50px;
+        width: calc(100% - 50px);
+    }
+}
+
+
+/* h-xs */
+
+@media screen and (max-height: 260px) {
+    #site_main .col_right>.upgrade {
+        display: none;
+    }
+}
+
+
+/* #endregion media-query */
